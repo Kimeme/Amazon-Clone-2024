@@ -5,7 +5,8 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { productUrl } from "../../Api/endPoints";
 import Loader from "../../Components/Loader/Loader"
-import ProductCard from '../../Components/Product/productCard'
+import ProductCard from '../../Components/Product/ProductCard';
+
 
 function ProductDetail() {
   const { productId } = useParams()
@@ -34,6 +35,7 @@ function ProductDetail() {
           product={product}
           flex={true}
           renderDesc={true}
+          renderAdd={true}
       />  
       )}
     </LayOut>
