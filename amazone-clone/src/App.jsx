@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+import React from "react";
+import Routing from "./Router.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1>Hello Yemisrach</h1>
-
+      <Routing />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
