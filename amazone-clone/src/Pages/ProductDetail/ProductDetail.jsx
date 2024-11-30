@@ -4,20 +4,24 @@ import LayOut from '../../Components/LayOut/LayOut'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { productUrl } from "../../Api/endPoints";
-// import Loader from "../../Components/Loader/Loader"
+import Loader from "../../Components/Loader/Loader"
 import ProductCard from '../../Components/Product/productCard'
 
 function ProductDetail() {
   const { productId } = useParams()
+  const [isLoading , setIsLoading]=useState(false)
   const [product, setProduct]=useState({})
   useEffect(() => {
+    setIsLoading(true)
     axios
       .get(`${productUrl}/products/${productId}`)
       .then((res) => {
         setProduct(res.data);
+        setIsLoading(false)
       })
       .catch((err) => {
         console.log(err);
+        setIsLoading(false);
       });
 
    
@@ -25,10 +29,13 @@ function ProductDetail() {
   
   return (
     <LayOut>
-
-      <ProductCard
-        product={product}
-      />     
+      {
+        isLoading? (<Loader/>):(<ProductCard
+          product={product}
+          flex={true}
+          renderDesc={true}
+      />  
+      )}
     </LayOut>
   )
 }
