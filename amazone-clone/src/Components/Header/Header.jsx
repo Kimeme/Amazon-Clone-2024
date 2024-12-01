@@ -19,7 +19,7 @@ const Header = () => {
       <section className={classes.header_container}>
         <div className={classes.logo_container}>
           {/* logo */}
-          <Link to href="#">
+          <Link to="#">
             <img
               src="https://pngimg.com/uploads/amazon/small/amazon_PNG11.png"
               alt="amazon logo"
@@ -38,12 +38,12 @@ const Header = () => {
           <select name="" id="">
             <option value="">All</option>
           </select>
-          <input type="text" />
+          <input type="text" name="" id="" placeholder="Search Product" />
           <BsSearch size={25} />
         </div>
         {/* Right side link */}
         <div className={classes.order_container}>
-          <Link to href="" className={classes.language}>
+          <Link to="" className={classes.language}>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png"
               alt="USA flags"
@@ -53,26 +53,24 @@ const Header = () => {
             </section>
           </Link>
           {/* three components */}
-          <Link href="">
+          <Link to="/SignIn">
             <p>Sign In</p>
             <span>Account & Lists</span>
           </Link>
           {/* orders */}
-          <Link href="/orders">
+          <Link to="/orders">
             <p>return</p>
             <span>& orders</span>
           </Link>
           {/* cart */}
-          <Link to ='/cart' className={classes.cart} >
+          <Link to="/cart" className={classes.cart}>
             {<BiCart size={35} />}
             <span>{basket.length}</span>
           </Link>
         </div>
       </section>
-      <LowerHeader/>
-
+      <LowerHeader />
     </section>
-    
   );
 }
 
