@@ -9,7 +9,8 @@ import classes from './Cart.module.css'
 function Cart() {
   const [{ basket, user }, dispatch] = useContext(DataContext)
   const total = basket.reduce((amount, item) => {
-    item.price + amount
+
+    return item.price + amount
   },0)
   return (
     <LayOut>

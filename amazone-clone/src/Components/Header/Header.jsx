@@ -63,7 +63,7 @@ const Header = () => {
             <span>& orders</span>
           </Link>
           {/* cart */}
-          <Link href='/cart' className={classes.cart} >
+          <Link to ='/cart' className={classes.cart} >
             {<BiCart size={35} />}
             <span>{basket.length}</span>
           </Link>
