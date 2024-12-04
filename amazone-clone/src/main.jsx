@@ -8,7 +8,7 @@ import { initialState, reducer } from './Utility/reducer'
 
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <React.StrictMode basename="/Amazon-Clone-2024/">
     <DataProvider reducer={reducer} initialState={initialState}>
       <App />
     </DataProvider>

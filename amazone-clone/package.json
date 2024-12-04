@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/Kimeme/Amazon-Clone-2024",
+  "homepage": "https://Kimeme.github.io/Amazon-Clone-2024",
   "name": "amazone-clone",
   "private": true,
   "version": "0.0.0",
@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.13.5",
     "@mui/material": "^6.1.9",
     "axios": "^1.7.8",
+    "firebase": "^11.0.2",
     "numeral": "^2.0.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
