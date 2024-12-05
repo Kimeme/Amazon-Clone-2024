@@ -30,9 +30,8 @@ const [{ user }, dispatch] = useContext(DataContext);
             user: userInfo.user,
           });
         })
-        .catch((err) => {
-        console.log(err)
-          // setError(err.message);
+        .catch((err) => {       
+          setError(err.message);
           // setLoading({ ...loading, signUP: false });
         });
 
@@ -46,8 +45,7 @@ const [{ user }, dispatch] = useContext(DataContext);
             });
          })
          .catch((err) => {
-           console.log(err)
-          //  setError(err.message);
+           setError(err.message);
           //  setLoading({ ...loading, signUP: false });
          });
 
