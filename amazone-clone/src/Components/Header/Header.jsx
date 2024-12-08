@@ -24,7 +24,7 @@ const Header = () => {
       <section className={classes.header_container}>
         <div className={classes.logo_container}>
           {/* logo */}
-          <Link to="#">
+          <Link to="/">
             <img
               src="https://pngimg.com/uploads/amazon/small/amazon_PNG11.png"
               alt="amazon logo"
