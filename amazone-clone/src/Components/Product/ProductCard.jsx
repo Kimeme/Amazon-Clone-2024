@@ -29,13 +29,14 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
       </Link>
       <div>
         <h3>{title}</h3>
-        {renderDesc && <div style={{ maxWidth: "750px" }}>{description}</div>}
-        <div className={classes.rating}>
+        {renderDesc && 
+        <div style={{ maxWidth: "750px" }}>{description}</div>}
+         <div className={classes.rating}>
           {/* rating */}
           <Rating value={rating?.rate} precision={0.1} />
           {/* count*/}
           <small>{rating?.count}</small>
-        </div>
+          </div>
         <div>
           {/* price */}
           <CurrencyFormat amount={price} />
